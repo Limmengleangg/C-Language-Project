@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <math.h>
+#include"Functions.h"
 
-int main()
+//Main Code
+int main() //Mengleang
 {
-    printf("Hello world!\n");
+
     return 0;
-}
+}//main code
