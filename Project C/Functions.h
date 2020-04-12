@@ -11,4 +11,4 @@ float moneyWithdraw(float balance);
 void menuExit();
 void errorMessage();
 
-#endif // FUNCTIONS_H_INCLUDED
+#endif
