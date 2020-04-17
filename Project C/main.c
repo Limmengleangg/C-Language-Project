@@ -36,7 +36,7 @@ int main() //Mengleang
             case 4:
             	system("CLS");
                 menuExit();
-                break;
+                return 0;
             default:
                 errorMessage();
                 break;
