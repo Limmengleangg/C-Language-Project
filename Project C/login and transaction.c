@@ -30,6 +30,27 @@ int login(int pass)
 
 void transaction(float balance)
 {
+    int options;
+    printf("You Choose to See your transaction history\n");
+    printf("Please Choose types of transaction below:\n");
+    printf("< 1 > Deposit\n");
+    printf("< 2 > Withdraw\n");
+
+    switch(options)
+    {
+        case 1:
+            system("CLS");
+            viewDeposit(balance);
+            break;
+        case 2:
+            system("CLS");
+            viewWithdraw(balance);
+            break;
+
+        default:
+            errorMessage();
+            break;
+    }
 
 }// view transaction
 

@@ -34,6 +34,10 @@ int main() //Mengleang
                 balance = moneyWithdraw(balance);
                 break;
             case 4:
+                system("CLS");
+                transaction(balance);
+                break;
+            case 5:
             	system("CLS");
                 menuExit();
                 return 0;
