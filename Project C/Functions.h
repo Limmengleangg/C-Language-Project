@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <math.h>
 
-int login(int num);
+int login(int pass);
 void mainMenu();
 void checkBalance(float balance);
 float moneyDeposit(float balance);
