@@ -9,9 +9,23 @@ float moneyDeposit(float balance) //Varin
     scanf("%f", &deposit);
 
     balance += deposit;
+    FILE *f;
+    f=fopen("history moneyDeposit.txt","w");
+    fprintf(f,"%f",balance);
+    fclose(f);
+
+    time_t t;
+    time(&t);
+    printf("", ctime(&t));
+
+    f=fopen("history time and date.txt","w");
+    fprintf(f,"%s",ctime(&t));
+    fclose(f);
 
     printf("\n****Your New Balance is:   $%.2f\n\n", balance);
+
     return balance;
+
 
 }//money deposit
 

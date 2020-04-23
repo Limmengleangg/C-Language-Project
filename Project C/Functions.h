@@ -2,6 +2,7 @@
 #define FUNCTIONS_H_INCLUDED
 #include <stdbool.h>
 #include <math.h>
+#include <stdio.h>
 
 int login(int pass);
 void mainMenu();
