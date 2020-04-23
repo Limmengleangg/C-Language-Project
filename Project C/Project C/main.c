@@ -7,6 +7,7 @@
 //Main Code
 int main() //Mengleang
 {
+    system("color 30");
     int option;
     float balance = 15000.00;
     int choose;
@@ -34,10 +35,6 @@ int main() //Mengleang
                 balance = moneyWithdraw(balance);
                 break;
             case 4:
-                system("CLS");
-                transaction(balance);
-                break;
-            case 5:
             	system("CLS");
                 menuExit();
                 return 0;

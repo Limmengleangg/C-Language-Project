@@ -32,10 +32,19 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="Functions.h" />
+		<Unit filename="login and transaction.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="mainMenu and checkBalance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menuExit and errorMessage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="moneyDeposit and moneyWithdraw.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
