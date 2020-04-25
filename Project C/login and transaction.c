@@ -2,27 +2,39 @@
 
 int login(int pass)
 {
-    int pass, i = 3;
+    int i, count = 0, flag = 0;
     printf("******************Hello!*******************\n");
-    printf("**********Welcome to ATM Banking***********\n\n");
-    printf("****Please enter your PIN number below****\n\n");
-    scanf("%d",&pass); //2020
+    printf("**********Welcome to ATM Banking***********\n");
+    printf("****Please enter your PIN number below:****\n\n");
 
-    while (i != 0)
+	do
 	{
-        printf("\nPlease enter the PIN number again: ");
+        printf("\nInput the password: ");
         scanf("%d",&pass);
 
-        if (pass == 2020)
+        for(i = 0; i < 3; i++)
         {
-            printf("Correct password");
-            i = 0;
+            if(pass == 2020)
+            {
+                printf("Successful!\n");
+                flag = 1;
+            }
         }
-        else
+
+        if(flag == 0)
         {
-            printf("Wrong password, try another");
+            if(count != 2)
+                printf("Wrong! please try again!\n");
+                count += 1;
         }
-	printf("\n");
+
+   } while(count > 0 && count < 3 && flag == 0);
+
+   if(flag == 0)
+   {
+       printf("Access deny!\n");
+       printf("Your account is blocked!\n");
+       exit(0);
    }
 
    return 0;
