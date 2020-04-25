@@ -68,7 +68,19 @@ void transaction(float balance)
 
 void viewDeposit(float balance)
 {
+    FILE *f;
+    f=fopen("history moneyDeposit.txt","r");
+    fscanf(f,"%f",&balance);
+    printf("Money is :  $%f\n",balance);
+    fclose(f);
 
+    time_t t;
+    time(&t);
+
+    f=fopen("history time and date.txt","r");
+    fscanf(f,"%s",ctime(&t));
+    printf("date and time is: %s\n",ctime(&t));
+    fclose(f);
 }// view deposit transaction history
 
 void viewWithdraw(float balance)

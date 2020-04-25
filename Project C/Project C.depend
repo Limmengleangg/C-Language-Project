@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1587282417 source:c:\users\varin chea\documents\github\c-language-project\project c\login and transaction.c
+	"Functions.h"
+
+1587553381 c:\users\varin chea\documents\github\c-language-project\project c\functions.h
+	<stdbool.h>
+	<math.h>
+	<stdio.h>
+
+1587263935 source:c:\users\varin chea\documents\github\c-language-project\project c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<math.h>
+	"Functions.h"
+
+1587263935 source:c:\users\varin chea\documents\github\c-language-project\project c\mainmenu and checkbalance.c
+	"Functions.h"
+
+1587263935 source:c:\users\varin chea\documents\github\c-language-project\project c\menuexit and errormessage.c
+	"Functions.h"
+
+1587553069 source:c:\users\varin chea\documents\github\c-language-project\project c\moneydeposit and moneywithdraw.c
+	"Functions.h"
+
