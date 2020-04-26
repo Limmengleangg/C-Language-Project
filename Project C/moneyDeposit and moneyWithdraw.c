@@ -1,7 +1,6 @@
 #include"Functions.h"
 
-float moneyDeposit(float balance) //Varin
-{
+float moneyDeposit(float balance) {
     float deposit;
     time_t t;
     time(&t);
@@ -37,15 +36,21 @@ float moneyDeposit(float balance) //Varin
 
 }//money deposit
 
-float moneyWithdraw(float balance) //Vatanak
-{
+float moneyWithdraw(float balance) {
     float withdraw;
     time_t t;
     time(&t);
     FILE *w;
+    FILE *bal;
 
     w = fopen("history moneyWithdraw.txt","a");
     if(w == NULL){
+        printf("ERROR!\n");
+        exit(1);
+    }
+
+    bal = fopen("Balance.txt","a");
+    if(bal == NULL) {
         printf("ERROR!\n");
         exit(1);
     }
@@ -68,7 +73,11 @@ float moneyWithdraw(float balance) //Vatanak
 
     fprintf(w,"%f\n",withdraw);
     fprintf(w,"%s\n",ctime(&t));
+    fprintf(bal,"%f",balance);
     fclose(w);
+    fclose(bal);
+
     return balance;
+
 
 }//money withdraw

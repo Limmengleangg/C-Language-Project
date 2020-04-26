@@ -4,12 +4,12 @@ int login(int pass)
 {
     int i, count = 0, flag = 0;
     printf("******************Hello!*******************\n");
-    printf("**********Welcome to ATM Banking***********\n");
+    printf("**********Welcome to ATM Banking***********\n\n");
     printf("****Please enter your PIN number below:****\n\n");
 
 	do
 	{
-        printf("\nInput the password: ");
+        printf("\nPlease enter PIN number: ");
         scanf("%d",&pass);
 
         for(i = 0; i < 3; i++)
@@ -37,25 +37,28 @@ int login(int pass)
        exit(0);
    }
 
-   return 0;
-}// user login
 
-void transaction(float balance)
+    return 0;
+} //user login
+
+void transaction()
 {
-    int options;
-    printf("You Choose to See your transaction history\n");
-    printf("Please Choose types of transaction below:\n");
+    int chose;
+
+    printf("You choose to view transaction history\n\n");
+    printf("Please choose transaction history view types:\n");
     printf("< 1 > Deposit\n");
     printf("< 2 > Withdraw\n");
+    scanf("%d",&chose);
 
-    switch(options)
+    switch(chose)
     {
         case 1:
-            system("CLS");
+            system("cls");
             viewDeposit();
             break;
         case 2:
-            system("CLS");
+            system("cls");
             viewWithdraw();
             break;
 
@@ -89,7 +92,7 @@ void viewDeposit()
 
 }// view deposit transaction history
 
-void viewWithdraw(float balance)
+void viewWithdraw()
 {
     float withdraw;
     time_t t;

@@ -2,20 +2,22 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
-#include <time.h>
+#include<time.h>
 #include"Functions.h"
 
 //Main Code
-int main() //Mengleang
-{
-    int option;
+int main() {
+    //Local Declarations
+    int option,pass;
     float balance;
     int choose;
 
-    login(num);
-    system("CLS");
+    login(pass);
+    system("cls");
 
     bool again = true;
+
+    // insert code here...
 
     while (again) {
     mainMenu();
@@ -23,6 +25,7 @@ int main() //Mengleang
     printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
     printf("Your Selection:\t");
     scanf("%d", &option);
+
 
         switch (option) {
             case 1:
@@ -45,6 +48,7 @@ int main() //Mengleang
             	system("CLS");
                 menuExit();
                 return 0;
+
             default:
                 errorMessage();
                 break;
@@ -57,11 +61,17 @@ int main() //Mengleang
         scanf("%d", &choose);
 
         system("CLS");
+
+
+
         if (choose == 2) {
             again = false;
             menuExit();
+
         }
-    }
+
+}
+
 
     return 0;
 }//main code
