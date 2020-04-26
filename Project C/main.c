@@ -2,14 +2,18 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <math.h>
+#include <time.h>
 #include"Functions.h"
 
 //Main Code
 int main() //Mengleang
 {
     int option;
-    float balance = 15000.00;
+    float balance;
     int choose;
+
+    login(num);
+    system("CLS");
 
     bool again = true;
 
@@ -35,7 +39,7 @@ int main() //Mengleang
                 break;
             case 4:
                 system("CLS");
-                transaction(balance);
+                transaction();
                 break;
             case 5:
             	system("CLS");

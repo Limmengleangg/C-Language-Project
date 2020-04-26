@@ -15,7 +15,22 @@ void mainMenu() //Sreyleap
 
 void checkBalance(float balance) //Sreyroth
 {
+    FILE *bal;
+    float deposit;
+
+    bal = fopen("Balance.txt","a+");
+    if(bal == NULL) {
+        printf("ERROR!\n");
+        exit(1);
+    }
+
     printf("You Choose to See your Balance\n");
+
+    while(fscanf(bal,"%f",&balance) != EOF) {
+        balance;
+    }
     printf("\n\n****Your Available Balance is:   $%.2f\n\n", balance);
+
+    fclose(bal);
 
 }//Check Balance

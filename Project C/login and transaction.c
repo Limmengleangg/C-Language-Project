@@ -33,7 +33,7 @@ int login(int pass)
    if(flag == 0)
    {
        printf("Access deny!\n");
-       printf("Your account is blocked!\n");
+       printf("Your account is blocked! Please contact to your Bank Customer Services\n");
        exit(0);
    }
 
@@ -52,11 +52,11 @@ void transaction(float balance)
     {
         case 1:
             system("CLS");
-            viewDeposit(balance);
+            viewDeposit();
             break;
         case 2:
             system("CLS");
-            viewWithdraw(balance);
+            viewWithdraw();
             break;
 
         default:
@@ -66,24 +66,48 @@ void transaction(float balance)
 
 }// view transaction
 
-void viewDeposit(float balance)
+void viewDeposit()
 {
-    FILE *f;
-    f=fopen("history moneyDeposit.txt","r");
-    fscanf(f,"%f",&balance);
-    printf("Money is :  $%f\n",balance);
-    fclose(f);
-
+    float deposit;
     time_t t;
     time(&t);
+    FILE *f;
 
-    f=fopen("history time and date.txt","r");
-    fscanf(f,"%s",ctime(&t));
-    printf("date and time is: %s\n",ctime(&t));
+    f = fopen("history moneyDeposit.txt","r");
+    if(f == NULL){
+        printf("Error!\n");
+        exit(1);
+    }
+
+    printf("You choose to view deposit history\n\n");
+
+    while(fscanf(f,"%f\n",&deposit) && fscanf(f,"%[^\n]",ctime(&t)) != EOF) {
+        printf("You have deposit: $%.2f\n",deposit);
+        printf("Date: %s\n",ctime(&t));
+    }
     fclose(f);
+
 }// view deposit transaction history
 
 void viewWithdraw(float balance)
 {
+    float withdraw;
+    time_t t;
+    time(&t);
+    FILE *w;
+
+    w = fopen("history moneyWithdraw.txt","r");
+    if(w == NULL){
+        printf("ERROR!\n");
+        exit(1);
+    }
+
+    printf("You choose to view withdraw history\n\n");
+
+    while(fscanf(w,"%f\n",&withdraw) && fscanf(w,"%[^\n]",ctime(&t)) != EOF) {
+        printf("You have withdraw: $%.2f\n",withdraw);
+        printf("Date: %s\n",ctime(&t));
+    }
+    fclose(w);
 
 }// view withdraw transaction history
